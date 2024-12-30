@@ -4,4 +4,5 @@ import { CurriculumVitaeComponent } from './components/curriculum-vitae/curricul
 
 export const routes: Routes = [
     { path: ':username', component: UserDetailComponent },
+    { path: "", redirectTo: "john", pathMatch: "full" }
   ];
