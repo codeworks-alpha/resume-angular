@@ -1,0 +1,211 @@
+
+@if (user) {
+    <div class="main-div">
+        <mat-card appMaterialElevation class="main-card mat-elevation-z20"
+            style="background-image: url({{user.templateSettings[0].value}})">
+            <div class="noprint bgbutton">
+                @if (editmode) {
+                <button mat-icon-button class="mat-elevation-z8" [matMenuTriggerFor]="editmenu"
+                    [matMenuTriggerData]="{attributes: user.templateSettings}" #editMenu="matMenuTrigger">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                }
+            </div>
+            <mat-card-header class="reg-padding">
+                <img mat-card-avatar class="header-image mat-elevation-z8" [src]="user.presentation[0].value" />
+                <mat-card-title class="user-title"><span class="colored">{{user.presentation[1].value}}</span>
+                    <div class="profile-button noprint">
+                        @if (editmode) {
+                        <button mat-icon-button class="mat-elevation-z4" [matMenuTriggerFor]="editmenu"
+                            [matMenuTriggerData]="{attributes: user.presentation}" #editMenu="matMenuTrigger">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                       }
+                    </div>
+                </mat-card-title>
+                <mat-card-subtitle class="colored dark" [innerHTML]="user.presentation[2].value"></mat-card-subtitle>
+                <mat-card-subtitle class="color-transparent">{{user.presentation[3].value}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions class="contact-info">
+                <a href="mailto:{{user.email}}">
+                    <button mat-button>
+                        <mat-icon>mail</mat-icon>
+                        {{user.email}}
+                    </button>
+                </a>
+                <button mat-button>
+                    <mat-icon>call</mat-icon>
+                    {{user.mobile}}
+                </button>
+                <a href="https://{{user.github}}" target="_blank">
+                    <button mat-button>
+                        <img class="icon-img" [src]="'assets/icons/github.svg'" />
+                        {{user.github}}
+                    </button>
+                </a>
+                <button mat-button>
+                    <mat-icon>pin_drop</mat-icon>
+                    {{user.location}}
+                </button>
+            </mat-card-actions>
+            <div class="row">
+                <div class="column">
+                    <mat-card-title class="resume-title">WORK EXPERIENCES<div class="add-button noprint">
+                        @if (editmode) {
+                            <button mat-icon-button class="mat-elevation-z4">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        }
+                        </div>
+                    </mat-card-title>
+                    <div class="reg-spacing">
+                        @for (exp of user.workExperiences; track $index) {
+                            <app-experience [experience]="exp" [editmode]="editmode">
+                            </app-experience> 
+                        }
+                    </div>
+                </div>
+                <div class="column">
+                    <mat-card-title class="resume-title">EDUCATION<div class="add-button noprint">
+                        @if (editmode) {
+                            <button mat-icon-button class="mat-elevation-z4">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        }
+                        </div>
+                    </mat-card-title>
+                    @for (acExp of user.academicExperiences; track $index) {
+                        <app-experience [experience]="acExp" [editmode]="editmode"></app-experience> 
+                    }
+                    <mat-card-title class="resume-title">SKILLS</mat-card-title>
+                    @for (skill of user.skills; track $index) {
+                        <div class="reg-spacing">
+                            <mat-card-title class="skill-title">{{skill.name}}</mat-card-title>
+                            <mat-chip-set cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="drop($event, skill)" aria-label="Skills">
+                                @for (element of skill.content; track $index) {
+                                    <mat-chip cdkDrag [matMenuTriggerFor]="addmenu" #addMenu="matMenuTrigger"
+                                        [matMenuTriggerData]="{element:element}">
+                                        <mat-chip-avatar>
+                                            @if (!element.score) {
+                                            <img class="skill-image" src="{{element.logoUrl}}" alt="{{element.name}}" /> }
+                                            @else {
+                                            <mat-progress-spinner matBadge="{{element.score}}" matBadgeSize="small"
+                                                matBadgeColor="accent" matTooltip="Score: {{element.score}}" matTooltipShowDelay="1000"
+                                                [value]="element.score" [diameter]="24" [strokeWidth]="3" >
+                                            </mat-progress-spinner>
+                                            }
+                                        </mat-chip-avatar>
+                                        {{element.name}}
+                                    </mat-chip>
+                                }   
+                                @if (editmode) {
+                                    <mat-chip class="noprint" [matMenuTriggerFor]="addmenu" #addMenu="matMenuTrigger">
+                                        <mat-icon>add</mat-icon>
+                                    </mat-chip>
+                                }
+                            </mat-chip-set>
+                            
+                            <mat-menu #addmenu="matMenu">
+                                <ng-template matMenuContent let-element="element">
+                                    <div class="context-menu" (click)="captureEvent($event)">
+                                        <mat-form-field class="add-skill" appearance="outline">
+                                            <mat-label>Skill Name</mat-label>
+                                            <input matInput type="text" [(ngModel)]="element.name" (click)="captureEvent($event)">
+                                        </mat-form-field>
+                            
+                                        <mat-form-field class="add-skill" appearance="outline">
+                                            <mat-label>{{skill.type === 'score' ? 'Score' : "Image URL"}}</mat-label>
+                                            @if (skill.type === 'score') {
+                                                <input matInput type="number" min="0" max="100" [(ngModel)]="element.score"
+                                                    (click)="captureEvent($event)">}
+                                            @if (skill.type === 'image') {
+                                                <input matInput type="text" [(ngModel)]="element.logoUrl"
+                                            (click)="captureEvent($event)">}
+                                            
+                                        </mat-form-field>
+                                        <div class="spaced">
+                                            <button mat-icon-button aria-label="Save" (click)="dismiss()">
+                                                <mat-icon matTooltip="Save" matTooltipShowDelay="1000" class="aprove">done</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="Remove" (click)="deleteSkill(element, skill)">
+                                                <mat-icon matTooltip="Delete" matTooltipShowDelay="1000" color="warn">close</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    @if (!element) {
+                                    <div class="context-menu" (click)="captureEvent($event)">
+                                        <mat-form-field class="add-skill" appearance="outline">
+                                            <mat-label>Skill Name</mat-label>
+                                            <input matInput type="text" [(ngModel)]="newSkill" (click)="captureEvent($event)">
+                                        </mat-form-field>
+                            
+                                        <mat-form-field class="add-skill" appearance="outline">
+                                            <mat-label>{{skill.type === 'score' ? 'Score' : "Image URL"}}</mat-label>
+                                            @if (skill.type === 'score') {
+                                                <input matInput type="number" min="0" max="100" [(ngModel)]="newScore" (click)="captureEvent($event)">
+                                            }
+                                            @if (skill.type === 'image') {
+                                                <input matInput type="text" [(ngModel)]="newUrl" (click)="captureEvent($event)">
+                                            }
+                            
+                                        </mat-form-field>
+                                        <div class="spaced">
+                                            <button mat-icon-button aria-label="Save" (click)="addSkill(skill)">
+                                                <mat-icon matTooltip="Save" matTooltipShowDelay="1000" class="aprove">done</mat-icon>
+                                            </button>
+                                            <button mat-icon-button aria-label="Remove" (click)="dismiss()">
+                                                <mat-icon matTooltip="Delete" matTooltipShowDelay="1000" color="warn">close</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                </ng-template>
+                            </mat-menu>
+                        </div>
+                    }
+                </div>
+            </div>
+    
+            <mat-card-actions class="align-right">
+                <div class="reg-padding"> Made with <a href="{{currentUrl()}}">{{currentUrl()}}</a></div>
+                <mat-slide-toggle class="noprint" [(ngModel)]="editmode">Edit mode</mat-slide-toggle>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+}
+
+<mat-menu #editmenu="matMenu">
+    <ng-template matMenuContent let-attributes="attributes">
+        @if (attributes) {
+        <div class="context-menu" (click)="captureEvent($event)">
+            @for (attribute of attributes; track $index) {
+                <div>
+                    @if (attribute.value.length <= 50) {
+                    <mat-form-field class="context-input" appearance="outline">
+                        <mat-label>{{attribute.field}}</mat-label>
+                        <input matInput type="text" [(ngModel)]="attribute.value" (click)="captureEvent($event)">
+                    </mat-form-field>
+                    }
+                    @else {
+                    <mat-form-field class="context-input" appearance="outline" >
+                        <mat-label>{{attribute.field}}</mat-label>
+                        <textarea matInput [(ngModel)]="attribute.value" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                            cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+                    </mat-form-field>
+                    }
+                </div>
+            }
+            <div class="spaced">
+                <button mat-icon-button aria-label="Save" (click)="saveChanges(attributes)">
+                    <mat-icon matTooltip="Save" matTooltipShowDelay="1000" class="aprove">done</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="Remove" (click)="dismiss()">
+                    <mat-icon matTooltip="Discart" matTooltipShowDelay="1000" color="warn">close</mat-icon>
+                </button>
+            </div>
+
+        </div>
+        }
+    </ng-template>
+</mat-menu>

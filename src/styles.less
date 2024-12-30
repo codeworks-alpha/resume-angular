@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: lightslategray;}
+
+.spaced {
+    display: flex;
+    flex-direction: row;
+    align-items :flex-end;
+    justify-content: right;
+}
+
+.mdc-button__label {
+    letter-spacing: 0.01em;
+  }
+  .mat-mdc-button .mdc-button__label {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-mdc-menu-panel {
+    max-width: unset!important;
+  }
+
+.context-menu {
+  padding: 12px;
+  width: 400px;
+  .context-input {
+    width: 100%;
+  }
+}
+
+
+
+@media print {
+    .noprint {
+       display: none;
+       visibility: hidden;
+       height: 0 !important;
+       padding: 0 !important;
+    }
+
+    body {
+        background-color: white;
+    }
+ }
+
+ .cdk-overlay-connected-position-bounding-box {
+    .mat-menu-panel {
+      max-width: unset !important;
+    }
+  
+    .mat-list-item-content {
+      justify-content: space-between;
+    }
+  }

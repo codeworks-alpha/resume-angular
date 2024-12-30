@@ -32,7 +32,8 @@
               }
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -103,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d8bf3737-9cee-4ddb-8762-6343ad9ee1ec"
   }
 }
