@@ -25,6 +25,7 @@
 
 <mat-menu #addmenu="matMenu">
     <ng-template matMenuContent let-element="element">
+        @if (element) {
         <div class="context-menu" (click)="captureEvent($event)">
             <mat-form-field class="add-skill" appearance="outline">
                 <mat-label>Skill Name</mat-label>
@@ -50,7 +51,8 @@
                 </button>
             </div>
         </div>
-        @if (!element) {
+       }
+        @else {
         <div class="context-menu" (click)="captureEvent($event)">
             <mat-form-field class="add-skill" appearance="outline">
                 <mat-label>Skill Name</mat-label>

@@ -20,7 +20,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-user-detail',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatCardModule, MatMenuModule, MatSlideToggleModule, MatInputModule, MatFormFieldModule, FormsModule, ExperienceComponent, MatIconModule, MatButtonModule, MatCardModule, MatMenuModule, MatSlideToggleModule, MatInputModule, MatFormFieldModule, FormsModule, MatChipsModule, MatProgressSpinnerModule, MatTooltipModule, MatBadgeModule],
+  imports: [MatIconModule, MatButtonModule, MatCardModule, MatMenuModule, MatSlideToggleModule, MatInputModule, MatFormFieldModule, FormsModule, ExperienceComponent, MatIconModule, MatButtonModule, MatCardModule, MatMenuModule, MatSlideToggleModule, MatInputModule, MatFormFieldModule, FormsModule, MatChipsModule, MatProgressSpinnerModule, MatTooltipModule, MatBadgeModule, SkillsComponent],
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.less'
 })
