@@ -169,7 +169,11 @@
             <mat-card-actions class="align-right">
                 <div class="reg-padding"> Made with <a href="{{currentUrl()}}">{{currentUrl()}}</a></div>
                 <mat-slide-toggle class="noprint" [(ngModel)]="editmode">Edit mode</mat-slide-toggle>
+                <mat-slide-toggle class="noprint" [(ngModel)]="export">Export</mat-slide-toggle>
             </mat-card-actions>
+            @if (export) {
+                <textarea [style.height]="'300px'" [value]="getUserValue()" name="" id=""></textarea>
+            }
         </mat-card>
     </div>
 

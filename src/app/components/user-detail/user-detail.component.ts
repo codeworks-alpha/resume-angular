@@ -25,6 +25,10 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrl: './user-detail.component.less'
 })
 export class UserDetailComponent implements OnInit {
+getUserValue() {
+
+return this.export ? JSON.stringify(this.user || "") : "";
+}
   @ViewChild("editMenu") editMenu!: MatMenuTrigger;
   @ViewChild("editBGMenu") editBGMenu!: MatMenuTrigger;
   public username!: string | null;
@@ -34,6 +38,7 @@ export class UserDetailComponent implements OnInit {
   newSkill!: string;
   newUrl!: string;
   newScore!: number;
+export: any;
 
   constructor(private route: ActivatedRoute, private userService: UserService) {}
 

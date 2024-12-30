@@ -140,6 +140,120 @@ export class UserService {
         },
       ]
     },
+    {
+      name: 'Emily Bernal', 
+      username: 'emily',
+      email: "emilybernal@gmail.com",
+      github: "github.com/emily-bernal",
+      mobile: "+57 301 6826788",
+      location: "Colombia",
+      presentation: [
+        { field: 'ImageURL', value: 'assets/img/profile-2.jpg' },
+        { field: 'Name', value: 'Emily Bernal' },
+        { field: 'Profession', value: `UX/UI Designer<br> Plastic Artist` },
+        { field: 'Presentation', value: "A versatile UX/UI designer and plastic artist with a strong background in creating visually compelling and user-centric designs. Skilled in crafting intuitive interfaces, developing impactful branding solutions, and integrating artistic expression into digital and physical mediums. Proficient in tools such as Figma, Adobe Creative Suite, and Procreate, with a deep understanding of design principles and human-centered design. Passionate about merging creativity and functionality to deliver engaging experiences and inspire through artistic innovation." }
+      ],
+      templateSettings: [
+        { field: 'BackgroundURL', value: 'https://www.pikpng.com/pngl/b/45-456227_transparent-black-border-border-clipart-education-black-and.png' }
+      ],
+      workExperiences: [
+        [
+          { field: 'CompanyLogoUrl', value: 'assets/icons/slabcode.svg' },
+          { field: 'CompanyName', value: 'Slabcode SAS' },
+          { field: 'Period', value: 'Sept 2024 - Present' },
+          { field: 'Position', value: 'Junior UX/UI' },
+          { field: 'Achievements', value: 'Developed responsive, intuitive web applications' }
+        ],
+      ],
+      academicExperiences: [
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/USB_logo.svg/1920px-USB_logo.svg.png' },
+          { field: 'InstitutionName', value: 'Corporación Universitaria Empresarial Alexander von Humboldt ' },
+          { field: 'Period', value: 'Sep 2019 - Jun 2024' },
+          { field: 'DegreeAcquired', value: 'Plastic Artist' },
+          { field: 'Achievements', value: 'Graduated' }
+        ],
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://iesantateresadejesus.edu.co/wp-content/uploads/2020/05/favicon.jpg' },
+          { field: 'InstitutionName', value: 'IE Santa Teresa de Jesus - CASD' },
+          { field: 'Period', value: 'Jan 2003 - Dec 2005' },
+          { field: 'DegreeAcquired', value: 'IT Certificate' },
+          { field: 'Achievements', value: 'HTML, CSS, JavaScript, Visual Basic, PHP, MySQL, MSOffice' }
+        ]
+      ],
+      skills: [
+        {
+          name: "Design Tools",
+          type: "score",
+          content: [
+            { name: "Figma", "score": 95 },
+            { name: "Adobe Photoshop", "score": 90 },
+            { name: "Adobe Illustrator", "score": 85 },
+            { name: "Adobe XD", "score": 80 },
+            { name: "Sketch", "score": 75 },
+            { name: "Procreate", "score": 90 },
+            { name: "Blender", "score": 70 }
+          ]
+        },
+        {
+          name: "UI/UX Design",
+          type: "score",
+          content: [
+            { name: "Wireframing", "score": 95 },
+            { name: "Prototyping", "score": 90 },
+            { name: "Interaction Design", "score": 85 },
+            { name: "Responsive Design", "score": 90 },
+            { name: "Accessibility", "score": 85 },
+            { name: "User Research", "score": 80 }
+          ]
+        },
+        {
+          name: "Artistic Skills",
+          type: "score",
+          content: [
+            { name: "Drawing & Sketching", "score": 95 },
+            { name: "Painting", "score": 90 },
+            { name: "Sculpture", "score": 80 },
+            { name: "3D Modeling", "score": 75 },
+            { name: "Mixed Media Art", "score": 85 }
+          ]
+        },
+        {
+          name: "Design & Collaboration Tools",
+          type: "image",
+          content: [
+            { name: "Figma", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+            { name: "Adobe Photoshop", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" },
+            { name: "Adobe Illustrator", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" },
+            { name: "Adobe XD", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" },
+            { name: "Blender", logoUrl: "assets/icons/blender.svg" },
+            { name: "Procreate", logoUrl: "https://procreate.art/procreate-apple-pencil-icon" },
+            { name: "Trello", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/Trello_logo.svg" },
+            { name: "Miro", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Miro-logo.png" },
+            { name: "Slack", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" },
+            { name: "JIRA", logoUrl: "assets/icons/jira.svg" }
+          ]
+        },
+        {
+          name: "Interests",
+          type: "image",
+          content: [
+            { name: "Graphic Design", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flat_design.svg" },
+            { name: "Fine Arts", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Art_palette_icon.svg" },
+            { name: "Photography", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/8/88/Camera_icon.svg" },
+            { name: "Architecture", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/2/29/Architect_icon.svg" },
+            { name: "Typography", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Typography_T_icon.svg" },
+            { name: "Motion Design", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/63/Play_video_icon.svg" }
+          ]
+        },        
+        {
+          name: "Languages", type: 'score', content: [
+            { name: "Spanish", score: 95 },
+            { name: "English", score: 80 }
+          ]
+        },
+      ]
+    },
     { name: 'Jane', username: 'jane', age: 29, location: 'USA' },
     { name: 'Luis', username: 'luis', age: 41, location: 'Spain' },
   ];
