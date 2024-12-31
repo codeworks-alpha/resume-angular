@@ -17,7 +17,7 @@ export class UserService {
       presentation: [
         { field: 'ImageURL', value: 'https://avatars.githubusercontent.com/u/20101141?v=4' },
         { field: 'Name', value: 'John Lenin Ortiz Gamba' },
-        { field: 'Profession', value: `Software Developer / Development Team Leader. <br> Bachelor of Science in Mechanical Engineering` },
+        { field: 'Profession', value: `Software Developer - Development Team Leader. - Bachelor of Science in Mechanical Engineering` },
         { field: 'Presentation', value: "A highly experienced Software Developer with a proven track record in leading development teams and delivering robust, scalable solutions. Proficient in a wide range of frontend technologies, including Angular, React, and Svelte, as well as backend frameworks such as Node.js and Java. Passionate about utilizing cutting-edge tools to solve complex problems and drive innovation, with expertise in full-stack development and a solid foundation in mechanical engineering." }
       ],
       templateSettings: [
@@ -150,7 +150,7 @@ export class UserService {
       presentation: [
         { field: 'ImageURL', value: 'assets/img/profile-2.jpg' },
         { field: 'Name', value: 'Emily Bernal' },
-        { field: 'Profession', value: `UX/UI Designer<br> Plastic Artist` },
+        { field: 'Profession', value: `UX/UI Designer - Plastic Artist` },
         { field: 'Presentation', value: "A versatile UX/UI designer and plastic artist with a strong background in creating visually compelling and user-centric designs. Skilled in crafting intuitive interfaces, developing impactful branding solutions, and integrating artistic expression into digital and physical mediums. Proficient in tools such as Figma, Adobe Creative Suite, and Procreate, with a deep understanding of design principles and human-centered design. Passionate about merging creativity and functionality to deliver engaging experiences and inspire through artistic innovation." }
       ],
       templateSettings: [

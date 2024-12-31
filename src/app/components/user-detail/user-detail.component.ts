@@ -55,6 +55,8 @@ export: any;
         this.title.setTitle(`${this.user.name}'s Profile`); 
         this.meta.updateTag({ name: 'title', content: `${this.user.name}'s Profile` });
         this.meta.updateTag({ name: 'description', content: `${this.user.presentation[2].value}` });
+        this.meta.updateTag({ name: 'keywords', content: `${this.user.presentation[3].value}` });
+
 
         this.saveData();
       });
