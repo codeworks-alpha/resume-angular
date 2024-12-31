@@ -52,8 +52,10 @@ export: any;
     if (this.username) {
       this.userService.getUserByusername(this.username).subscribe(user => {
         this.user = user;
-        this.title.setTitle("Example of SEO Meta Tag using Angular"); 
-        this.meta.updateTag({ name: 'title', content: 'Example of SEO Meta Tag' });
+        this.title.setTitle(`${this.user.name}'s Profile`); 
+        this.meta.updateTag({ name: 'title', content: `${this.user.name}'s Profile` });
+        this.meta.updateTag({ name: 'description', content: `${this.user.presentation[2].value}` });
+
         this.saveData();
       });
     }
