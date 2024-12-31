@@ -16,6 +16,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-detail',
@@ -40,13 +41,19 @@ return this.export ? JSON.stringify(this.user || "") : "";
   newScore!: number;
 export: any;
 
-  constructor(private route: ActivatedRoute, private userService: UserService) {}
+  constructor(
+    private route: ActivatedRoute, 
+    private userService: UserService,
+    private title: Title,  
+    private meta: Meta) {}
 
   ngOnInit(): void {
     this.username = this.route.snapshot.paramMap.get('username');
     if (this.username) {
       this.userService.getUserByusername(this.username).subscribe(user => {
         this.user = user;
+        this.title.setTitle("Example of SEO Meta Tag using Angular"); 
+        this.meta.updateTag({ name: 'title', content: 'Example of SEO Meta Tag' });
         this.saveData();
       });
     }
