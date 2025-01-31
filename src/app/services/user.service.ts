@@ -141,6 +141,90 @@ export class UserService {
       ]
     },
     {
+      name: 'Gladys', 
+      username: 'doctoragarreffa',
+      email: "doctoragarreffa@gmail.com",
+      github: "",
+      mobile: "+57 3155655259",
+      location: "Colombia",
+      presentation: [
+        { field: 'ImageURL', value: '/assets/img/doctora-garreffa.png' },
+        { field: 'Name', value: 'Gladys Titina Garreffa Barbato' },
+        { field: 'Profession', value: `Médico, salud bioemocional` },
+        { field: 'Presentation', value: "Médico general, con estudios y diplomados en salud mental y emocional. Guío a los consultantes a mejorar su salud mental y emocional brindándoles herramientas para superar el estrés por el que estén atravesando, así como las vivencias pasadas que estén limitando su presente y futuro. Gestión del estrés y promoción del bienestar personal y profesional" }
+      ],
+      templateSettings: [
+        { field: 'BackgroundURL', value: 'https://www.pikpng.com/pngl/b/45-456227_transparent-black-border-border-clipart-education-black-and.png' }
+      ],
+      workExperiences: [[
+        { field: 'CompanyLogoUrl', value: 'https://static.wixstatic.com/media/14f752_0a7918f26d3441a4b06a054026d911c7~mv2.png/v1/crop/x_340,y_0,w_320,h_225,q_85,enc_avif,quality_auto/14f752_0a7918f26d3441a4b06a054026d911c7~mv2.png' },
+        { field: 'CompanyName', value: 'Centro de salud Pronto Socorro, nivel II' },
+        { field: 'Period', value: 'Julio 2019 - Julio 2020' },
+        { field: 'Position', value: 'Médico Rural' },
+        { field: 'Achievements', value: 'Primera linea de atención a pacientes con diferentes patologias/motivos de consulta' }
+      ],
+      [
+        { field: 'CompanyLogoUrl', value: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxTQnLtYoNYUBJNOXbdBlVgNXDBn7QoTUSUQ&s' },
+        { field: 'CompanyName', value: 'CAME-IPS Piedecuesta' },
+        { field: 'Period', value: 'Enero 2023 - Mayo 2023' },
+        { field: 'Position', value: 'Médico General' },
+        { field: 'Achievements', value: 'Consultas de medicina general, con énfasis en examen osteomuscular.' }
+      ],
+      [
+        { field: 'CompanyLogoUrl', value: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwFYSDlEeRxT-IlucK5SEXMfo0_8OtFxy2g&s' },
+        { field: 'CompanyName', value: 'Consultas de salud bioemocional' },
+        { field: 'Period', value: 'Mayo 2024 - Presente' },
+        { field: 'Position', value: 'Médico en salud bioemocional' },
+        { field: 'Achievements', value: 'Consultas particulares de salud física, mental y emocional.' }
+      ]
+      ],
+      academicExperiences: [
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/UC_logo.png/180px-UC_logo.png' },
+          { field: 'InstitutionName', value: 'Universidad de Carabobo' },
+          { field: 'Period', value: 'Enero 2008 - Febrero 2017' },
+          { field: 'DegreeAcquired', value: 'Médico Cirujano' },
+          { field: 'Achievements', value: 'Tesis de Grado: Violencia obstétrica en pacientes atendidas en el Hospital José María Benitez.' }
+        ],
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/UC_logo.png/180px-UC_logo.png' },
+          { field: 'InstitutionName', value: 'Universidad de Carabobo' },
+          { field: 'Period', value: 'Septiembre - Noviembre 2019 (200h)' },
+          { field: 'DegreeAcquired', value: 'Diplomado en estética facial y corporal' },
+          { field: 'Achievements', value: 'Diplomado en estética facial y corporal' }
+        ],
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153165026/settings_images/da06afd-251-21c-3acc-fafda36c7ef_dd5ca7b7-7d3c-4a18-914c-5711c0ba7223.png' },
+          { field: 'InstitutionName', value: 'Cuerpo Mente Alma University' },
+          { field: 'Period', value: 'Octubre 2023 - Febrero 2024' },
+          { field: 'DegreeAcquired', value: 'Diplomado en biodescodificacion y salud bioemocional' },
+          { field: 'Achievements', value: 'Diplomado en biodescodificacion y salud bioemocional' }
+        ],
+        [
+          { field: 'InstitutionLogoUrl', value: 'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2153165026/settings_images/da06afd-251-21c-3acc-fafda36c7ef_dd5ca7b7-7d3c-4a18-914c-5711c0ba7223.png' },
+          { field: 'InstitutionName', value: 'Cuerpo Mente Alma University' },
+          { field: 'Period', value: 'Octubre 2024 - Presente' },
+          { field: 'DegreeAcquired', value: 'Diplomado en liberación emocional profunda y coaching de vida' },
+          { field: 'Achievements', value: 'Diplomado en liberación emocional profunda y coaching de vida' }
+        ]
+      ],
+      skills: [
+        {
+          name: "Interests", type: 'image', content: [
+            { name: "Salud Mental", logoUrl: 'https://cdn-icons-png.flaticon.com/512/3998/3998035.png' },
+            { name: "Bienestar Emocional", logoUrl: 'https://img.freepik.com/vector-gratis/diseno-inteligencia-emocional_24877-81668.jpg' },
+            { name: "Mente, Cuerpo y Alma", logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZngaF5i9Cz4CC6KedpSKjeljtKfEOEei9hw&s' }
+          ]
+        },
+        {
+          name: "Languages", type: 'score', content: [
+            { name: "Español", score: 99 },
+            { name: "Ingles", score: 70 }
+          ]
+        },
+      ]
+    },
+    {
       name: 'Emily Bernal', 
       username: 'emily',
       email: "emilybernal@gmail.com",
