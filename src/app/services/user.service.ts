@@ -148,7 +148,7 @@ export class UserService {
       mobile: "+57 3155655259",
       location: "Colombia",
       presentation: [
-        { field: 'ImageURL', value: '/assets/img/doctora-garreffa.png' },
+        { field: 'ImageURL', value: '/assets/img/doctora-yaya.jpeg' },
         { field: 'Name', value: 'Gladys Titina Garreffa Barbato' },
         { field: 'Profession', value: `Médico, salud bioemocional` },
         { field: 'Presentation', value: "Médico general, con estudios y diplomados en salud mental y emocional. Guío a los consultantes a mejorar su salud mental y emocional brindándoles herramientas para superar el estrés por el que estén atravesando, así como las vivencias pasadas que estén limitando su presente y futuro. Gestión del estrés y promoción del bienestar personal y profesional" }
