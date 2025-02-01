@@ -154,7 +154,7 @@ export class UserService {
         { field: 'Presentation', value: "Médico general, con estudios y diplomados en salud mental y emocional. Guío a los consultantes a mejorar su salud mental y emocional brindándoles herramientas para superar el estrés por el que estén atravesando, así como las vivencias pasadas que estén limitando su presente y futuro. Gestión del estrés y promoción del bienestar personal y profesional" }
       ],
       templateSettings: [
-        { field: 'BackgroundURL', value: 'https://www.pikpng.com/pngl/b/45-456227_transparent-black-border-border-clipart-education-black-and.png' }
+        { field: 'BackgroundURL', value: 'https://i.pinimg.com/736x/88/7c/90/887c905e4c879c901a5ed7a7f01218ae.jpg' }
       ],
       workExperiences: [[
         { field: 'CompanyLogoUrl', value: 'https://static.wixstatic.com/media/14f752_0a7918f26d3441a4b06a054026d911c7~mv2.png/v1/crop/x_340,y_0,w_320,h_225,q_85,enc_avif,quality_auto/14f752_0a7918f26d3441a4b06a054026d911c7~mv2.png' },
@@ -238,7 +238,7 @@ export class UserService {
         { field: 'Presentation', value: "A versatile UX/UI designer and plastic artist with a strong background in creating visually compelling and user-centric designs. Skilled in crafting intuitive interfaces, developing impactful branding solutions, and integrating artistic expression into digital and physical mediums. Proficient in tools such as Figma, Adobe Creative Suite, and Procreate, with a deep understanding of design principles and human-centered design. Passionate about merging creativity and functionality to deliver engaging experiences and inspire through artistic innovation." }
       ],
       templateSettings: [
-        { field: 'BackgroundURL', value: 'https://www.pikpng.com/pngl/b/45-456227_transparent-black-border-border-clipart-education-black-and.png' }
+        { field: 'BackgroundURL', value: 'https://i.pinimg.com/736x/88/7c/90/887c905e4c879c901a5ed7a7f01218ae.jpg' }
       ],
       workExperiences: [
         [
